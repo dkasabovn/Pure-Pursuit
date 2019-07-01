@@ -3,8 +3,8 @@ package Spline;
 import Coords.*;
 
 public class QHS {
-    public double ax,bx,cx,dx,ex,fx;
-    public double ay,by,cy,dy,ey,fy;
+    double ax,bx,cx,dx,ex,fx;
+    double ay,by,cy,dy,ey,fy;
 
     public QHS(Waypoint p0, Waypoint p1) {
         ax = -6 * p0.x - 3 * p0.dx - 0.5 * p0.ddx + 0.5 * p1.ddx - 3 * p1.dx + 6 * p1.x;
