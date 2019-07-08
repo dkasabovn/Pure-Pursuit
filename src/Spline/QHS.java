@@ -1,6 +1,7 @@
 package Spline;
 
 import Coords.*;
+import Interfaces.EType;
 
 public class QHS {
     double ax,bx,cx,dx,ex,fx;
@@ -20,5 +21,17 @@ public class QHS {
         dy = 0.5 * p0.ddy;
         ey = p0.dy;
         fy = p0.y;
+    }
+
+    public Equation getYEquation() {
+        return new Equation(EType.QUINTIC_HERMITE, ay, by, cy, dy, ey, fy);
+    }
+
+    public Equation getXEquation() {
+        return new Equation(EType.QUINTIC_HERMITE, ax, bx, cx, dx, ex, fx);
+    }
+
+    public ParametricEquation getParametric() {
+        return new ParametricEquation(getXEquation(), getYEquation());
     }
 }
