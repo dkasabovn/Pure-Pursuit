@@ -5,6 +5,6 @@ class State constructor(x : Double, y : Double, var velocity : Double = 0.0, var
         get() = Point(x,y)
 
     override fun toString() : String {
-        return "($x,$y)\nk=$curvature\ndist=$distance\nvel=$velocity"
+        return "($distance,$velocity)"
     }
 }

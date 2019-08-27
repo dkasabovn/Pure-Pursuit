@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e312c0b0-d069-42cf-8d9c-76a2728ef260" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Constraints/MotionConstraint.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Path/PathGenerator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Path/PathGenerator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Coords/State.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Spline-Stuff/Coords/State.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Spline-Stuff/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Path/PathGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Spline-Stuff/Path/PathGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Coords/State.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Coords/State.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

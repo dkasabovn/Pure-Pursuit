@@ -1,3 +1,4 @@
+import Constraints.MotionConstraint
 import Coords.*
 import Extensions.fuzzyEquals
 import Extensions.interpolate
@@ -19,10 +20,11 @@ object Main {
                 State(15.0,15.0),
                 State(20.0,17.0)
         )
-        val path = PathGenerator(pts, 2.0, .9,.1,.5)
+        val path = PathGenerator(pts, 2.0, .9,.1,.5, MotionConstraint(20.0, 2.0, 3.0))
         println("start")
         for (j in path.out) {
             println(j)
         }
+        //State is printing (Dist, Vel)
     }
 }
