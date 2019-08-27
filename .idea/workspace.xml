@@ -2,45 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e312c0b0-d069-42cf-8d9c-76a2728ef260" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Spline-Stuff.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Spline-Stuff.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Path/PathGenerator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Coords/CurvePoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Spline-Stuff/Coords/CurvePoint.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Coords/HyperPoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Constraints/DirectionController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Constraints/LinearController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Constraints/MotionConstraint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Constraints/PolynomialController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Constraints/SingularController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Coords/Point.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Spline-Stuff/Coords/Point.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Coords/State.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Spline-Stuff/Coords/State.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Coords/Waypoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Spline-Stuff/Coords/Waypoint.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Interfaces/EAccuracy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Spline-Stuff/Interfaces/EAccuracy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Interfaces/EType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Spline-Stuff/Interfaces/EType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Interfaces/Spline.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/META-INF/Spline-Stuff.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Spline-Stuff/META-INF/Spline-Stuff.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Extensions/MathExtensionKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Spline-Stuff/Extensions/MathExtensionKt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Spline-Stuff/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Math/MathUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Profiles/MotionConstraint.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Profiles/TrapezoidalMotionProfile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Spline/CHS.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Spline/Equation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Spline-Stuff/Spline/Equation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Spline/ParametricEquation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Spline-Stuff/Spline/ParametricEquation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Spline/Line.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Spline/ParametrizedSpline.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Spline-Stuff/Spline/ParametrizedSpline.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Spline/QHS.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Spline-Stuff/Spline/QHS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Spline/QHSFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Coords/CurvePoint.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Coords/HyperPoint.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Coords/Point.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Coords/State.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Coords/Waypoint.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaces/EAccuracy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaces/EType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaces/Spline.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Math/MathUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Profiles/MotionConstraint.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Profiles/TrapezoidalMotionProfile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Spline/CHS.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Spline/Equation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Spline/ParametricEquation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Spline/ParametrizedSpline.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Spline/QHS.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Spline/QHSFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/TankDrive/TankDirectionController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Constraints/DirectionController.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Constraints/LinearController.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Constraints/MotionConstraint.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Constraints/PolynomialController.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Constraints/SingularController.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Coords/Point.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Coords/Point.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Coords/State.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Coords/State.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Extensions/MathExtension.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Extensions/MathExtension.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Spline/Line.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Spline/LineConstructor.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TankDrive/TankDirectionController.kt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,209 +39,19 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Spline/Line.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Spline/Equation.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="19" column="38" lean-forward="true" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Spline/ParametricEquation.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="42" lean-forward="true" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
-              <folding>
-                <element signature="e#16#51#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Coords/Waypoint.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Spline/ParametrizedSpline.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Spline/QHS.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Coords/Point.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" selection-start-line="6" selection-end-line="13" selection-end-column="1" />
-              <folding>
-                <element signature="e#16#86#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Extensions/MathExtension.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="23" selection-start-line="23" selection-end-line="23" selection-end-column="81" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Math/Arc.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="49" column="29" lean-forward="true" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
-              <folding>
-                <element signature="e#14#104#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Coords/State.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
         <option value="Enum" />
-        <option value="Kotlin Class" />
         <option value="Class" />
         <option value="Kotlin File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>QHSFactory</find>
-      <find>QHSFactory.</find>
-      <find>x1</find>
-      <find>x2</find>
-      <find>x3</find>
-      <find>y1</find>
-      <find>int</find>
-      <find>y2</find>
-      <find>y3</find>
-      <find>e var</find>
-      <find>eq.getY()</find>
-      <find>internal</find>
-      <find>override</find>
-      <find>override</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>p0.x</replace>
-      <replace>p1.x</replace>
-      <replace>p2.x</replace>
-      <replace>p0.y</replace>
-      <replace>double</replace>
-      <replace>p1.y</replace>
-      <replace>p2.y</replace>
-      <replace>e val</replace>
-      <replace>y</replace>
-      <replace>private</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/DeleteLater/Play.java" />
-        <option value="$PROJECT_DIR$/src/Interfaces/EType.java" />
-        <option value="$PROJECT_DIR$/src/Coords/FatPoint.java" />
-        <option value="$PROJECT_DIR$/src/Interfaces/EAccuracy.java" />
-        <option value="$PROJECT_DIR$/src/Spline/CHS.java" />
-        <option value="$PROJECT_DIR$/src/Coords/HyperPoint.java" />
-        <option value="$PROJECT_DIR$/src/Spline/DumbParameterizedSpline.java" />
-        <option value="$PROJECT_DIR$/src/Coords/State.java" />
-        <option value="$PROJECT_DIR$/src/Coords/Trajectory.java" />
-        <option value="$PROJECT_DIR$/src/Profiles/TrapezoidalMotionProfile.java" />
-        <option value="$PROJECT_DIR$/src/Profiles/DumbTrajectoryGenerator.java" />
-        <option value="$PROJECT_DIR$/src/Spline/ParametricEquation.java" />
-        <option value="$PROJECT_DIR$/src/Spline/Equation.java" />
-        <option value="$PROJECT_DIR$/src/Profiles/MotionConstraint.java" />
-        <option value="$PROJECT_DIR$/src/Constraints/GeometryConstraint.java" />
-        <option value="$PROJECT_DIR$/src/Coords/Waypoint.java" />
-        <option value="$PROJECT_DIR$/src/Math/MathUtil.java" />
-        <option value="$PROJECT_DIR$/src/Spline/QHSFactory.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/Math/GeometryConstraint.java" />
-        <option value="$PROJECT_DIR$/src/Spline/ParametrizedSpline.java" />
-        <option value="$PROJECT_DIR$/src/Math/Arc.java" />
-        <option value="$PROJECT_DIR$/src/Constraints/MotionConstraint.java" />
-        <option value="$PROJECT_DIR$/src/Math/GeometryConstraint.kt" />
-        <option value="$PROJECT_DIR$/src/Coords/Trajectory.kt" />
-        <option value="$PROJECT_DIR$/src/Coords/State.kt" />
-        <option value="$PROJECT_DIR$/src/Profiles/TrapezoidalMotionProfile.kt" />
-        <option value="$PROJECT_DIR$/src/Interfaces/EAccuracy.kt" />
-        <option value="$PROJECT_DIR$/src/Coords/CurvePoint.java" />
-        <option value="$PROJECT_DIR$/src/Interfaces/EType.kt" />
-        <option value="$PROJECT_DIR$/src/Spline/Equation.kt" />
-        <option value="$PROJECT_DIR$/src/Spline/QHSFactory.kt" />
-        <option value="$PROJECT_DIR$/src/Math/MathUtil.kt" />
-        <option value="$PROJECT_DIR$/src/Spline/ParametrizedSpline.kt" />
-        <option value="$PROJECT_DIR$/src/Spline/QHS.kt" />
-        <option value="$PROJECT_DIR$/src/Math/Arc.kt" />
-        <option value="$PROJECT_DIR$/src/Coords/Waypoint.kt" />
-        <option value="$PROJECT_DIR$/src/Coords/CurvePoint.kt" />
-        <option value="$PROJECT_DIR$/src/Constraints/MotionConstraint.kt" />
-        <option value="$PROJECT_DIR$/src/Spline/LineConstructor.kt" />
-        <option value="$PROJECT_DIR$/src/TankDrive/TankDirectionController.kt" />
-        <option value="$PROJECT_DIR$/src/Constraints/LinearController.java" />
-        <option value="$PROJECT_DIR$/src/Constraints/DirectionController.kt" />
-        <option value="$PROJECT_DIR$/src/Coords/Point.kt" />
-        <option value="$PROJECT_DIR$/src/Spline/ParametricEquation.kt" />
-        <option value="$PROJECT_DIR$/src/Constraints/LinearController.kt" />
-        <option value="$PROJECT_DIR$/src/Extensions/MathExtension.kt" />
-        <option value="$PROJECT_DIR$/src/Main.kt" />
-        <option value="$PROJECT_DIR$/src/Constraints/PolynomialController.kt" />
-        <option value="$PROJECT_DIR$/src/Constraints/SingularController.kt" />
-        <option value="$PROJECT_DIR$/src/Spline/Line.kt" />
-      </list>
-    </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="451" />
@@ -261,73 +59,7 @@
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Spline-Stuff" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spline-Stuff" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Spline-Stuff" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spline-Stuff" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Spline-Stuff" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spline-Stuff" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Constraints" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Spline-Stuff" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spline-Stuff" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Coords" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Spline-Stuff" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spline-Stuff" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Extensions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Spline-Stuff" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spline-Stuff" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Interfaces" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Spline-Stuff" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spline-Stuff" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Math" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Spline-Stuff" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spline-Stuff" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Spline" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Spline-Stuff" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spline-Stuff" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="TankDrive" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
-  </component>
+  <component name="ProjectId" id="1PywgLEqjpiVvpPGxJVB9Cvy8T1" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -402,229 +134,18 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24147122" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="UI Designer" order="3" />
-      <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.21885157" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32936078" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32936078" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Palette&#9;" order="5" />
-    </layout>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/DeleteLater/Matrix.java" />
-    <entry file="file://$PROJECT_DIR$/src/DeleteLater/Play.java" />
-    <entry file="file://$PROJECT_DIR$/src/Coords/FatPoint.java" />
-    <entry file="file://$PROJECT_DIR$/src/Spline/CHS.java" />
-    <entry file="file://$PROJECT_DIR$/src/Coords/HyperPoint.java" />
-    <entry file="file://$PROJECT_DIR$/src/Spline/DumbParameterizedSpline.java" />
-    <entry file="file://$PROJECT_DIR$/src/Profiles/DumbTrajectoryGenerator.java" />
-    <entry file="file://$PROJECT_DIR$/src/Constraints.java" />
-    <entry file="file://$PROJECT_DIR$/src/Constraints/GeometryConstraint.java" />
-    <entry file="file://$PROJECT_DIR$/src/Coords/Trajectory.kt" />
-    <entry file="file://$PROJECT_DIR$/src/Profiles/TrapezoidalMotionProfile.kt" />
-    <entry file="file://$PROJECT_DIR$/src/Interfaces/EAccuracy.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Coords/CurvePoint.java" />
-    <entry file="file://$PROJECT_DIR$/src/Interfaces/Spline.kt" />
-    <entry file="file://$PROJECT_DIR$/src/Interfaces/EType.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Spline/QHSFactory.kt" />
-    <entry file="file://$PROJECT_DIR$/src/Math/GeometryConstraint.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/lang/Math.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="1411" column="25" selection-start-line="1411" selection-start-column="25" selection-end-line="1411" selection-end-column="25" />
-          <folding>
-            <element signature="e#54761#54762#0" expanded="true" />
-            <element signature="e#54810#54811#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Coords/CurvePoint.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Constraints/LinearController.java" />
-    <entry file="file://$PROJECT_DIR$/src/Spline/LineConstructor.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Constraints/MotionConstraint.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TankDrive/TankDirectionController.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Constraints/DirectionController.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Constraints/LinearController.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding>
-            <element signature="e#21#78#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Constraints/PolynomialController.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding>
-            <element signature="e#21#98#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Constraints/SingularController.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Coords/State.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Math/Arc.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="29" lean-forward="true" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
-          <folding>
-            <element signature="e#14#104#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Coords/Point.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="13" selection-end-column="1" />
-          <folding>
-            <element signature="e#16#86#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Extensions/MathExtension.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" selection-start-line="23" selection-end-line="23" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Spline/Line.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Spline/Equation.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="19" column="38" lean-forward="true" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Spline/QHS.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Spline/ParametricEquation.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="42" lean-forward="true" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
-          <folding>
-            <element signature="e#16#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Coords/Waypoint.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Spline/ParametrizedSpline.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="masterDetails">
     <states>

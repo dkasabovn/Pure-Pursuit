@@ -1,5 +1,0 @@
-package TankDrive
-
-class TankDirectionController() {
-
-}

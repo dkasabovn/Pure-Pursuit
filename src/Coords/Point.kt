@@ -11,4 +11,8 @@ open class Point(var x: Double, var y: Double) {
     }
     val unitVector : Point get() = Point(x/magnitude, y/magnitude)
     val magnitude : Double get() = sqrt(x.pow(2.0) + y.pow(2.0))
+
+    override fun toString(): String {
+        return "($x,$y)"
+    }
 }

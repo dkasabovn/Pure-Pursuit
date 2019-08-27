@@ -21,7 +21,11 @@ fun MutableList<Double>.smooth(drop : Double) {
 
 infix fun Waypoint.interpolate(p1 : Waypoint) : ParametricEquation = QHS(this, p1).parametric
 
-infix operator fun Point.minus(other : Point) : Point = Point(this.x-x, this.y-y)
+infix operator fun Point.minus(other : Point) : Point = Point(this.x-other.x, this.y-other.y)
+
+infix operator fun Point.times(other : Double) : Point = Point(this.x * other, this.y * other)
+
+infix operator fun Point.plus(other : Point) : Point = Point(this.x + other.x, this.y + other.y)
 
 fun Double.r2d() : Double = this * (180/ PI)
 
