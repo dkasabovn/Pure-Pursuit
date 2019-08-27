@@ -1,5 +1,6 @@
 package Path
 
+import Constraints.MotionConstraint
 import Coords.*
 import Extensions.minus
 import Extensions.plus
@@ -7,19 +8,21 @@ import Extensions.times
 import Math.Arc
 import kotlin.math.abs
 import kotlin.math.min
+import kotlin.math.pow
+import kotlin.math.sqrt
 
 class PathGenerator {
     val out : MutableList<State> = mutableListOf()
 
-    constructor(points: MutableList<State>, spacing: Double){
+    constructor(points: MutableList<State>, spacing: Double, constraints : MotionConstraint){
         inject(out, points, spacing)
-        label()
+        label(constraints)
     }
 
-    constructor(points: MutableList<State>, spacing: Double, a : Double, b : Double, tol : Double){
+    constructor(points: MutableList<State>, spacing: Double, a : Double, b : Double, tol : Double, constraints : MotionConstraint){
         inject(out, points, spacing)
         smooth(a, b, tol)
-        label()
+        label(constraints)
     }
 
     fun inject(arr : MutableList<State>, points : MutableList<State>, spacing: Double) {
@@ -55,7 +58,7 @@ class PathGenerator {
         return new
     }
     //TODO add velocity calculations
-    fun label() {
+    fun label(const : MotionConstraint) {
         var sum = 0.0
         out.forEachIndexed { index, state ->
             state.curvature = if (index > 0 && index < out.size-1) {
@@ -69,7 +72,18 @@ class PathGenerator {
             } else {
                 0.0
             }
-            state.velocity = min(0.0,1.0)
+            state.velocity = min(const.maxV,const.k/state.curvature)
+        }
+    }
+
+    private fun limitAccel(const: MotionConstraint) {
+        out.reverse()
+        out.forEachIndexed { i, state ->
+            state.velocity = if (i > 0) {
+                min(state.velocity, sqrt(out[i-1].velocity.pow(2) + (2 * const.maxA * state.distance))
+            } else {
+                0.0
+            }
         }
     }
 }
