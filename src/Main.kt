@@ -19,9 +19,9 @@ object Main {
                 State(15.0,15.0),
                 State(20.0,17.0)
         )
-        val path = PathGenerator(pts, 2.0)
+        val path = PathGenerator(pts, 2.0, .9,.1,.5)
         println("start")
-        for (j in path.smooth(1.0-.1,.1, .5)) {
+        for (j in path.out) {
             println(j)
         }
     }

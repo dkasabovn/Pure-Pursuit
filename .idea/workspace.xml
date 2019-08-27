@@ -2,33 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e312c0b0-d069-42cf-8d9c-76a2728ef260" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Path/PathGenerator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Constraints/DirectionController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Constraints/LinearController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Constraints/MotionConstraint.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Constraints/PolynomialController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Constraints/SingularController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Coords/Point.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Spline-Stuff/Coords/Point.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Coords/State.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Spline-Stuff/Coords/State.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Extensions/MathExtensionKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Spline-Stuff/Extensions/MathExtensionKt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Spline-Stuff/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Spline/Line.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Spline/ParametrizedSpline.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Spline-Stuff/Spline/ParametrizedSpline.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/TankDrive/TankDirectionController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constraints/DirectionController.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constraints/LinearController.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constraints/MotionConstraint.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constraints/PolynomialController.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constraints/SingularController.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Coords/Point.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Coords/Point.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Path/PathGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Spline-Stuff/Path/PathGenerator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Coords/State.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Coords/State.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Extensions/MathExtension.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Extensions/MathExtension.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Spline/Line.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Spline/LineConstructor.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TankDrive/TankDirectionController.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Path/PathGenerator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Path/PathGenerator.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

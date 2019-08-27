@@ -6,19 +6,23 @@ import Extensions.plus
 import Extensions.times
 import Math.Arc
 import kotlin.math.abs
+import kotlin.math.min
 
-class PathGenerator constructor(points : MutableList<State>, var spacing : Double){
+class PathGenerator {
     val out : MutableList<State> = mutableListOf()
-    init {
-        inject(out, points)
+
+    constructor(points: MutableList<State>, spacing: Double){
+        inject(out, points, spacing)
+        label()
     }
 
-    constructor(points: MutableList<State>, spacing: Double, a : Double, b : Double, tol : Double) : this(points, spacing) {
-        inject(out, points)
+    constructor(points: MutableList<State>, spacing: Double, a : Double, b : Double, tol : Double){
+        inject(out, points, spacing)
         smooth(a, b, tol)
+        label()
     }
 
-    fun inject(arr : MutableList<State>, points : MutableList<State>) {
+    fun inject(arr : MutableList<State>, points : MutableList<State>, spacing: Double) {
         for (i in 0 until points.size-1) {
             val a = points[i].location
             val b = points[i+1].location
@@ -53,13 +57,19 @@ class PathGenerator constructor(points : MutableList<State>, var spacing : Doubl
     //TODO add velocity calculations
     fun label() {
         var sum = 0.0
-        for (i in 1 until out.size-1) {
-            val arc = Arc(out[i-1].location, out[i].location, out[i+1].location)
-            sum += out[i-1].location distance out[i].location
-            val vel = 0.0
-            out[i].curvature = arc.curvature
-            out[i].distance = sum
-            out[i].velocity = vel
+        out.forEachIndexed { index, state ->
+            state.curvature = if (index > 0 && index < out.size-1) {
+                Arc(out[index-1], state, out[index+1]).curvature
+            } else {
+                0.0
+            }
+            state.distance = sum
+            sum += if (index < out.size-1) {
+                state distance out[index+1]
+            } else {
+                0.0
+            }
+            state.velocity = min(0.0,1.0)
         }
     }
 }
