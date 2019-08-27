@@ -74,16 +74,18 @@ class PathGenerator {
             }
             state.velocity = min(const.maxV,const.k/state.curvature)
         }
+        limitAccel(const)
     }
 
     private fun limitAccel(const: MotionConstraint) {
         out.reverse()
         out.forEachIndexed { i, state ->
             state.velocity = if (i > 0) {
-                min(state.velocity, sqrt(out[i-1].velocity.pow(2) + (2 * const.maxA * state.distance))
+                min(state.velocity, sqrt(out[i-1].velocity.pow(2) + (2 * const.maxA * state.distance)))
             } else {
                 0.0
             }
         }
+        out.reverse()
     }
 }
