@@ -11,18 +11,22 @@ import kotlin.math.min
 import kotlin.math.pow
 import kotlin.math.sqrt
 
-class PathGenerator {
-    val out : MutableList<State> = mutableListOf()
+object PathGenerator {
 
-    constructor(points: MutableList<State>, spacing: Double, constraints : MotionConstraint){
+
+    fun generate(points: MutableList<State>, spacing: Double, constraints : MotionConstraint) : MutableList<State> {
+        val out : MutableList<State> = mutableListOf()
         inject(out, points, spacing)
-        label(constraints)
+        label(out, constraints)
+        return out
     }
 
-    constructor(points: MutableList<State>, spacing: Double, a : Double, b : Double, tol : Double, constraints : MotionConstraint){
+    fun generate(points: MutableList<State>, spacing: Double, a : Double, b : Double, tol : Double, constraints : MotionConstraint) : MutableList<State> {
+        var out : MutableList<State> = mutableListOf()
         inject(out, points, spacing)
-        smooth(a, b, tol)
-        label(constraints)
+        val smooth = smooth(out, a, b, tol)
+        label(smooth, constraints)
+        return smooth
     }
 
     fun inject(arr : MutableList<State>, points : MutableList<State>, spacing: Double) {
@@ -40,7 +44,7 @@ class PathGenerator {
         arr.add(points.last())
     }
 
-    fun smooth(a : Double, b : Double, tol : Double) : MutableList<State> {
+    fun smooth(out : MutableList<State>,a : Double, b : Double, tol : Double) : MutableList<State> {
         val new : MutableList<State> = out.toMutableList()
         var c = tol
 
@@ -57,8 +61,8 @@ class PathGenerator {
         }
         return new
     }
-    //TODO add velocity calculations
-    fun label(const : MotionConstraint) {
+
+    fun label(out : MutableList<State>,const : MotionConstraint) {
         var sum = 0.0
         out.forEachIndexed { index, state ->
             state.curvature = if (index > 0 && index < out.size-1) {
@@ -74,10 +78,10 @@ class PathGenerator {
             }
             state.velocity = min(const.maxV,const.k/state.curvature)
         }
-        limitAccel(const)
+        limitAccel(out, const)
     }
 
-    private fun limitAccel(const: MotionConstraint) {
+    private fun limitAccel(out : MutableList<State>,const: MotionConstraint) {
         out.reverse()
         out.forEachIndexed { i, state ->
             state.velocity = if (i > 0) {
