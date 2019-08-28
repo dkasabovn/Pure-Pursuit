@@ -27,6 +27,10 @@ infix operator fun Point.times(other : Double) : Point = Point(this.x * other, t
 
 infix operator fun Point.plus(other : Point) : Point = Point(this.x + other.x, this.y + other.y)
 
+
+
+infix fun Point.dot(other: Point) : Double = (this.x*other.x) + (this.y*other.y)
+
 fun Double.r2d() : Double = this * (180/ PI)
 
 fun Double.d2r() : Double = this * (PI/180)

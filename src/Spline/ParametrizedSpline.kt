@@ -2,7 +2,6 @@ package Spline
 
 import Coords.Point
 import Coords.Waypoint
-import Interfaces.EAccuracy
 import Math.Arc
 import Math.GeometryConstraint
 import java.util.ArrayList

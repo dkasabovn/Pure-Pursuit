@@ -65,6 +65,11 @@ object PathGenerator {
     fun label(out : MutableList<State>,const : MotionConstraint) {
         var sum = 0.0
         out.forEachIndexed { index, state ->
+            state.next = if (index < out.size-1) {
+                out[index+1]
+            } else {
+                state
+            }
             state.curvature = if (index > 0 && index < out.size-1) {
                 Arc(out[index-1], state, out[index+1]).curvature
             } else {

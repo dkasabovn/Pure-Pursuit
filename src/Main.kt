@@ -1,14 +1,6 @@
 import Constraints.MotionConstraint
 import Coords.*
-import Extensions.fuzzyEquals
-import Extensions.interpolate
-import Extensions.r2d
-import Extensions.smooth
-import Interfaces.EAccuracy
 import Path.PathGenerator
-import Spline.*
-import kotlin.math.PI
-import kotlin.math.log
 
 object Main {
     @JvmStatic
