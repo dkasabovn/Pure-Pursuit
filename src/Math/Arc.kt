@@ -11,6 +11,12 @@ class Arc {
     private var k: Double = 0.toDouble()
     private var r: Double = 0.toDouble()
 
+    constructor(r: Double, h : Double, k : Double) {
+        this.r = r
+        this.h = h
+        this.k = k
+    }
+
     //if you want to do the math do it or just go here:
     //https://www.geeksforgeeks.org/equation-of-circle-when-three-points-on-the-circle-are-given/
     //shamelessly stolen don't @me

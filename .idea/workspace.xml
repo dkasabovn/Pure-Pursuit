@@ -3,20 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e312c0b0-d069-42cf-8d9c-76a2728ef260" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Coords/CurvePoint.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Coords/State.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Spline-Stuff/Coords/State.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Extensions/MathExtensionKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Spline-Stuff/Extensions/MathExtensionKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Interfaces/EAccuracy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Interfaces/EType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Spline-Stuff/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Path/PathFollower.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Spline-Stuff/Path/PathFollower.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Path/PathGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Spline-Stuff/Path/PathGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Spline/Equation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Spline-Stuff/Spline/Equation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Spline/ParametricEquation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Spline-Stuff/Spline/ParametricEquation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Spline/ParametrizedSpline.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Spline-Stuff/Spline/ParametrizedSpline.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spline-Stuff/Spline/QHS.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Spline-Stuff/Spline/QHS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Spline/Equation.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Spline/Equation.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Spline/QHS.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Spline/QHS.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Math/Arc.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Math/Arc.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Path/PathFollower.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Path/PathFollower.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,16 +26,6 @@
         <option value="Kotlin Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>var</find>
-      <find>discriminant</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>val</replace>
-      <replace>discrim</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />

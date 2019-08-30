@@ -7,9 +7,10 @@ import Coords.Position
 import Coords.State
 import Extensions.*
 import kotlin.math.*
+import Math.Arc
 import kotlin.system.measureTimeMillis
 
-class PurePursuit constructor(val path : MutableList<State>, val lookDist : Double,val robotPosition : () -> Position, val kinematics: DriveKinematics, val co : PIDFCoefficients) {
+class PathFollower constructor(val path : MutableList<State>, val lookDist : Double,val robotPosition : () -> Position, val kinematics: DriveKinematics, val co : PIDFCoefficients) {
     var lastClosest : Int = 0
     var loopTime : Double = 50.0
     fun closestWaypoint() : State {
@@ -85,5 +86,15 @@ class PurePursuit constructor(val path : MutableList<State>, val lookDist : Doub
         val side = sign(sin(rloc.heading.d2r()) * (lookAheadPoint.x - rloc.x) - cos(rloc.heading.d2r()) * (lookAheadPoint.y - rloc.y))
         val curvature = (2 * x / lookDist.pow(2)) * side;
         return curvature
+    }
+
+    fun findArc() : Arc {
+        val r = findCurvature().pow(-1)
+        val rloc = robotPosition()
+        val theta = rloc.heading
+        var center = Point(cos(theta-90.0.d2r()), cos(theta-90.0.d2r()))
+        center *= r
+        var coords = center + rloc
+        return Arc(r, coords.x, coords.y)
     }
 }
