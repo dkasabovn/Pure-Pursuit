@@ -1,2 +1,2 @@
-# Spline-Stuff
-A copy-paste repository for storing spline generation code. Use at your own will.
+# Pure-Pursuit
+A pure pursuit library based off team 1712's whitepaper
