@@ -1,7 +1,6 @@
 package Spline
 
 import Coords.Point
-import Interfaces.*
 
 class Equation constructor(private val a: Double, private val b: Double, private val c: Double, private val d: Double, private val e: Double, private val f: Double) {
 

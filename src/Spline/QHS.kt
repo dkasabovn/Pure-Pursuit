@@ -1,7 +1,6 @@
 package Spline
 
 import Coords.*
-import Interfaces.EType
 
 class QHS(p0: Waypoint, p1: Waypoint) {
     private val ax = -6 * p0.x - 3 * p0.dx - 0.5 * p0.ddx + 0.5 * p1.ddx - 3 * p1.dx + 6 * p1.x
