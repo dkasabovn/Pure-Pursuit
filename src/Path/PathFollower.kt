@@ -43,7 +43,7 @@ class PathFollower constructor(val path : MutableList<State>, val lookDist : Dou
             val ffl = (co.kV * desiredVelocities[0]) + (co.kA * (eL)/loopTime)
             val ffr = (co.kV * desiredVelocities[1]) + (co.kA * (eR)/loopTime)
             val leftPower = ffl + eL * co.kP
-            val rightPower = ffl + eR * co.kP
+            val rightPower = ffr + eR * co.kP
             list = listOf(leftPower, rightPower, leftPower, rightPower)
         }.toDouble()
         return list
