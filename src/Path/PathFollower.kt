@@ -1,20 +1,19 @@
 package Path
 
 import Constraints.DriveKinematics
+import Constraints.MotionConstraint
 import Constraints.PIDFCoefficients
 import Coords.Point
 import Coords.Position
 import Coords.State
 import Extensions.*
 import kotlin.math.*
-import Math.Arc
-import kotlin.system.measureTimeMillis
 
-class PathFollower constructor(val path : MutableList<State>, val lookDist : Double,val robotPosition : () -> Position, val kinematics: DriveKinematics, val co : PIDFCoefficients) {
+class PathFollower constructor(val path : MutableList<State>, val lookDist : Double, val kinematics: DriveKinematics, val co : PIDFCoefficients, val acceleration : Double) {
     var lastClosest : Int = 0
-    var loopTime : Double = 50.0
-    fun closestWaypoint() : State {
-        val rloc = robotPosition()
+    var previousVelocity : Double = 0.0
+
+    fun closestWaypoint(rloc : Position) : State {
         var minDist = Double.MAX_VALUE
         var closestPoint = path.get(0)
         for (i in lastClosest until path.size) {
@@ -25,41 +24,60 @@ class PathFollower constructor(val path : MutableList<State>, val lookDist : Dou
                 lastClosest = i
             }
         }
-        return closestPoint;
+        return closestPoint
     }
 
-    fun followPath() {
-        val closestPoint = closestWaypoint()
-        val curvature = findCurvature()
-        val desiredVelocity = kinematics.getTargetVelocities(closestPoint.velocity, curvature)
-        val powers = PIDF(0.0,0.0, desiredVelocity)
-    }
-    //TODO add ways to get left and right wheel velocities
-    fun PIDF(left : Double, right : Double, desiredVelocities : List<Double>) : List<Double> {
-        var list = listOf<Double>()
-        loopTime = measureTimeMillis {
-            val eL = desiredVelocities[0] - left
-            val eR = desiredVelocities[1] - right
-            val ffl = (co.kV * desiredVelocities[0]) + (co.kA * (eL)/loopTime)
-            val ffr = (co.kV * desiredVelocities[1]) + (co.kA * (eR)/loopTime)
-            val leftPower = ffl + eL * co.kP
-            val rightPower = ffr + eR * co.kP
-            list = listOf(leftPower, rightPower, leftPower, rightPower)
-        }.toDouble()
-        return list
+    fun followPath(rloc: Position, left : Double, right : Double, time: Double) : List<Double> {
+        val closestPoint = closestWaypoint(rloc)
+        var looka : Point = closestPoint.next
+        for (waypoint in path.subList(lastClosest, path.size)) {
+            val lookb = lookAhead(rloc, waypoint)
+            if (lookb != null) {
+                looka = lookb
+                break
+            } else {
+                continue
+            }
+        }
+        val curvature = findCurvature(rloc, looka)
+        val maxC = time * (acceleration)
+        val totalChange = (closestPoint.velocity - previousVelocity).clip(-maxC, maxC)
+        val newVelocity = previousVelocity + totalChange
+        previousVelocity = newVelocity
+        val desiredVelocity = kinematics.getTargetVelocities(min(closestPoint.velocity, newVelocity), curvature)
+        return (PIDF(left,right, desiredVelocity, time))
     }
 
-    fun lookAhead() : Point {
-        val closest = closestWaypoint()
-        val rloc = robotPosition()
+    fun PIDF(left : Double, right : Double, desiredVelocities : List<Double>, time: Double) : List<Double> {
+        val eL = desiredVelocities[0] - left
+        val eR = desiredVelocities[1] - right
+        val ffl = (co.kV * desiredVelocities[0]) + (co.kA * (eL)/time)
+        val ffr = (co.kV * desiredVelocities[1]) + (co.kA * (eR)/time)
+        var leftPower = ffl + eL * co.kP
+        var rightPower = ffr + eR * co.kP
+        if (leftPower > 1.0 || rightPower > 1.0) {
+            if (leftPower > 1.0 && leftPower > rightPower) {
+                val mult = 1.0/leftPower
+                leftPower *= mult
+                rightPower *= mult
+            } else if (rightPower > 1.0) {
+                val mult = 1.0/rightPower
+                leftPower *= mult
+                rightPower *= mult
+            }
+        }
+        return listOf(leftPower, rightPower)
+    }
+
+    fun lookAhead(rloc: Position, closest : State) : Point? {
         val d = closest.next - closest
         val f = closest - rloc
         val a = d dot d
-        val b = 2 * (f dot d)
-        val c = (f dot f) - lookDist.pow(2)
-        var discrim = b.pow(2) - 4 * a * c
+        val b = 2.0 * (f dot d)
+        val c = (f dot f) - lookDist.pow(2.0)
+        var discrim = b.pow(2.0) - 4.0 * a * c
         if (discrim < 0) {
-            //No
+            return null
         } else {
             discrim = sqrt(discrim)
             val t0 : Double = (-b - discrim) / (2.0 * a)
@@ -72,29 +90,15 @@ class PathFollower constructor(val path : MutableList<State>, val lookDist : Dou
             }
             //no intersection
         }
-
-        return Point(0.0,0.0)
+        return null
     }
 
-    fun findCurvature() : Double {
-        val rloc = robotPosition()
-        val lookAheadPoint = lookAhead()
-        val a = -tan(rloc.heading.d2r())
+    fun findCurvature(rloc: Position, lookAheadPoint: Point) : Double {
+        val a = -tan(rloc.heading)
         val b = 1.0
-        val c = tan(rloc.heading.d2r()) * rloc.x - rloc.y
+        val c = tan(rloc.heading) * rloc.x - rloc.y
         val x = abs(a * lookAheadPoint.x + b * lookAheadPoint.y + c) / sqrt(a.pow(2) + b.pow(2))
-        val side = sign(sin(rloc.heading.d2r()) * (lookAheadPoint.x - rloc.x) - cos(rloc.heading.d2r()) * (lookAheadPoint.y - rloc.y))
-        val curvature = (2 * x / lookDist.pow(2)) * side;
-        return curvature
-    }
-
-    fun findArc() : Arc {
-        val r = findCurvature().pow(-1)
-        val rloc = robotPosition()
-        val theta = rloc.heading
-        var center = Point(cos(theta-90.0.d2r()), cos(theta-90.0.d2r()))
-        center *= r
-        var coords = center + rloc
-        return Arc(r, coords.x, coords.y)
+        val side = sign(sin(rloc.heading) * (lookAheadPoint.x - rloc.x) - cos(rloc.heading) * (lookAheadPoint.y - rloc.y))
+        return (2.0 * x / lookDist.pow(2)) * side
     }
 }

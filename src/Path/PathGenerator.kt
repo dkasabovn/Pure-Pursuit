@@ -6,10 +6,7 @@ import Extensions.minus
 import Extensions.plus
 import Extensions.times
 import Math.Arc
-import kotlin.math.abs
-import kotlin.math.min
-import kotlin.math.pow
-import kotlin.math.sqrt
+import kotlin.math.*
 
 object PathGenerator {
 
@@ -22,7 +19,7 @@ object PathGenerator {
     }
 
     fun generate(points: MutableList<State>, spacing: Double, a : Double, b : Double, tol : Double, constraints : MotionConstraint) : MutableList<State> {
-        var out : MutableList<State> = mutableListOf()
+        val out : MutableList<State> = mutableListOf()
         inject(out, points, spacing)
         val smooth = smooth(out, a, b, tol)
         label(smooth, constraints)
@@ -71,7 +68,12 @@ object PathGenerator {
                 state
             }
             state.curvature = if (index > 0 && index < out.size-1) {
-                Arc(out[index-1], state, out[index+1]).curvature
+                val c = getCurvature(out[index-1], state, out[index+1])
+                if (c.isNaN()) {
+                    0.0
+                } else {
+                    c
+                }
             } else {
                 0.0
             }
@@ -81,20 +83,30 @@ object PathGenerator {
             } else {
                 0.0
             }
-            state.velocity = min(const.maxV,const.k/state.curvature)
+
+            state.velocity = min(const.maxV,if (state.curvature.isNaN()) {
+                const.maxV
+            } else {
+                const.k / state.curvature
+            })
         }
-        limitAccel(out, const)
+        out[out.size-1].velocity = 0.0
+        for (i in out.size-2 downTo 0) {
+            val distance = out[i] distance out[i+1]
+            val b = sqrt(out[i + 1].velocity.pow(2) + (2.0 * const.maxA * distance))
+            out[i].velocity = min(out[i].velocity, b)
+        }
     }
 
-    private fun limitAccel(out : MutableList<State>,const: MotionConstraint) {
-        out.reverse()
-        out.forEachIndexed { i, state ->
-            state.velocity = if (i > 0) {
-                min(state.velocity, sqrt(out[i-1].velocity.pow(2) + (2 * const.maxA * state.distance)))
-            } else {
-                0.0
-            }
+    private fun getCurvature(p0: Point, p1: Point, p2: Point) : Double {
+        if (p0.x == p1.x) {
+            p1.x += .0001
         }
-        out.reverse()
+        val k1 = .5 * (p0.x.pow(2) + p0.y.pow(2) - p1.x.pow(2) -p1.y.pow(2))/ (p0.x - p1.x)
+        val k2= (p0.y - p1.y) / (p0.x - p1.x)
+        val b= 0.5 * (p1.x.pow(2)- 2 * p1.x  * k1 + p1.y.pow(2) - p2.x.pow(2) + 2 * p2.x * k1 - p2.y.pow(2)) / (p2.x * k2 - p2.y + p1.y - p1.x * k2)
+        val a = k1-k2 * b
+        val r = sqrt( (p0.x - a).pow(2) + (p0.y - b).pow(2))
+        return 1.0/r
     }
 }

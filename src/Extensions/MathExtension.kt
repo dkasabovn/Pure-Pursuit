@@ -6,6 +6,8 @@ import Spline.ParametricEquation
 import Spline.QHS
 import kotlin.math.PI
 import kotlin.math.abs
+import kotlin.math.max
+import kotlin.math.min
 
 fun Double.fuzzyEquals(b: Double, tolerance: Double): Boolean {
     return abs(this - b) < tolerance
@@ -27,10 +29,10 @@ infix operator fun Point.times(other : Double) : Point = Point(this.x * other, t
 
 infix operator fun Point.plus(other : Point) : Point = Point(this.x + other.x, this.y + other.y)
 
-
-
 infix fun Point.dot(other: Point) : Double = (this.x*other.x) + (this.y*other.y)
 
 fun Double.r2d() : Double = this * (180/ PI)
 
 fun Double.d2r() : Double = this * (PI/180)
+
+fun Double.clip(vi : Double, vf : Double) : Double = max(min(vf,this),vi)
