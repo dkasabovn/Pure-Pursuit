@@ -16,7 +16,7 @@ object Main {
     @JvmStatic
     fun main(args: Array<String>) {
         val pts = mutableListOf(State(0.0,0.0), State(40.0,0.0), State(80.0, 0.0))
-        val path = PathGenerator.generate(mutableListOf(State(0.0,0.0), State(58.0,0.0), State(67.0,-4.0), State(68.0,-7.0), State(68.0,-12.0), State(68.0,-16.0)), 5.0,.9,.1,1.0,MotionConstraint(40.0,10.0,1.0))
+        val path = PathGenerator.generate(mutableListOf(State(0.0,0.0), State(28.0, -8.0)), 2.0, .9,.1,.5, MotionConstraint(30.0, 7.0, 1.0))
         val follower = PathFollower(path,10.0, TankKinematics(5.0), PIDFCoefficients(0.0,0.0,0.0,0.0,0.0), 5.0)
         println("start")
         var time = 0.0
